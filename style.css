@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+main{
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    padding: 1%;
+    background: rgb(39, 39, 43);
+}
+
+section{
+    gap:5%;
+}
+header{
+    height: 20%;
+    margin-bottom: 2%;
+}
+header input{
+    height: 100%;
+    width: 100%;
+}
+.botones{
+    height: 78%;
+    display: flex;
+    padding: 5%;
+}
+button{
+    font-size: 3rem;
+    border-radius: 50%;
+    flex-grow: 1;
+}
+.numeros{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    width: 75%;
+}
+.numeros button{
+    width: 30%;
+    background: rgb(98, 98, 100);
+    color: white;
+}
+
+.numeros button:active,.operadores button:active{
+    transform: scale(0.8);
+}
+.operadores{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+.operadores button{
+    background: rgb(242, 163, 60);
+    color: white;
+}
+@media (min-width: 481px) {
+   
+    button{
+        border-radius: 20%;
+        font-size: 5rem;
+    }
+}
+@media (min-width: 1025px) {
+    .numeros button:hover, .operadores button:hover{
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+    .numeros button:active,.operadores button:active{
+        transform: scale(0.9);
+    }
+    section, .botones{
+        gap:0%;
+    }
+    button{
+        border-radius: 0%;
+        font-size: 7rem;
+    }
+}
